@@ -2,10 +2,12 @@ import React from 'react'
 
 function People() {
   return (
-    <div className="min-h-[400px] bg-yellow-300 pt-[40px]">
-      <div className="ml-5 text-[50px] md:ml-20 text-[20px] font-bold">
+    <div className=" min-h-[400px] pt-[40px]">
+      <div className="text-[20px] font-bold">
         Our People
-        <div className="w-4/5 max-w-[500px] ml-[30px] rounded-2xl  h-[700px] bg-gray-900">
+        <div className="bg-white
+        border-4 border-gray-900
+        w-full max-w-[500px] h-[700px]">
 
         </div>
       </div>

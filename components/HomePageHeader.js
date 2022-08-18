@@ -8,9 +8,9 @@ function HomePageHeader() {
     <div>
         <Logo/>
         <div className="px-4 py-20 flex flex-col">
-          <div className="font-mono flex space-x-3 text-[20px]">
+          <div className="flex-col font-mono flex text-[20px]">
             <h4> Fighting for </h4>
-            <strong className="bg-yellow-300 px-1">
+            <strong className="w-full bg-white">
               <Typical
                 steps={[
                   'bipoc',
