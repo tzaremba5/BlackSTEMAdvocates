@@ -49,7 +49,7 @@ export default function Home() {
                   <HomePageCard title={"Our Mission"}/>
                 </button>
                 <button onClick={handleClick2}>
-                  <HomePageCard title={"Our People"} link={"/people"}/>
+                  <HomePageCard title={"Our Leader"} link={"/people"}/>
                 </button>
               </main>
 
@@ -64,9 +64,13 @@ export default function Home() {
             </div>
         </div>
       </div>
-      <div className="flex justify-center space-y-4 mb-[20px]">
+      <div className="flex justify-center bg-gradient-to-b 
+        from-white
+        to-yellow-300 
+        via-white
+        animate-gradient-x pb-[20px]">
         <div className="">
-          <div ref={ref1}>
+          <div className="" ref={ref1}>
             <Mission/>
           </div>
           <div ref={ref2} className="mb-[20px]">

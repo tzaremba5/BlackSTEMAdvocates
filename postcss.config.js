@@ -5,4 +5,7 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
   },
+  images: { 
+    domains: ['ucarecdn.com'] 
+  },
 }
