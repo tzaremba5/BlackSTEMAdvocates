@@ -7,8 +7,8 @@ function HomePageHeader() {
   return (
     <div>
         <Logo/>
-        <div className="px-4 py-20 flex flex-col">
-          <div className="flex-col font-mono flex text-[20px]">
+        <div className="flex justify-center pt-[20px] pb-[100px]">
+          <div className="flex-col font-mono flex text-[35px]">
             <h4> Fighting for </h4>
             <strong className="w-full bg-white">
               <Typical

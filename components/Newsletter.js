@@ -43,7 +43,7 @@ export default () => {
           disabled={state === "LOADING"}
           onClick={subscribe}
         >
-          Subscribe
+          Sign Up
         </button>
       </div>
       {state === "ERROR" && (
