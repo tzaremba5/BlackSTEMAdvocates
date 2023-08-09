@@ -3,17 +3,7 @@ import Image from 'next/image'
 
 function Footer() {
   return (
-    <div className="flex justify-center space-x-20
-    pb-[30px] pt-[30px]">
-      <div>
-        <div className='text-[30px] font-bold mb-[10px]'>
-          Donate
-        </div>
-        <script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe 
-        src="https://donorbox.org/embed/the-black-stem-advocates-1" name="donorbox" 
-        allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" 
-        scrolling="no" height="" width="100%"></iframe>
-      </div>
+    <div className="space-x-20 pb-[30px] pt-[30px]">
       <div className="mt-[60px] flex justify-around w-1/2 max-w-[500px]">
         <div className="cursor-pointer hover:text-gray-700"> 
           <a href='https://www.instagram.com/derick_devon/' target='_blank'>

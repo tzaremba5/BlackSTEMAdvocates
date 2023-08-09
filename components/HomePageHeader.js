@@ -1,30 +1,28 @@
 import React from 'react'
-import Typical from 'react-typical';
 import Logo from './Logo';
-
+import Link from 'next/link'
 
 function HomePageHeader() {
+
   return (
-    <div>
-        <Logo/>
-        <div className="flex justify-center pt-[20px] pb-[100px]">
-          <div className="flex-col font-mono flex text-[35px]">
-            <h4> Fighting for </h4>
-            <strong className="w-full bg-white">
-              <Typical
-                steps={[
-                  'bipoc',
-                  1000,
-                  'LGBTQIA+',
-                  1000,
-                  'underrepresnted',
-                  1000
-                ]}
-                wrapper="p"
-                loop={Infinity}
-              />
-            </strong>
-            <h4> STEM students </h4>
+    <div className=''>
+        <div className='flex justify-between'>
+          <div className='left-element'>
+            <Logo/>
+          </div>
+          <div className='mt-[10px] right-element w-[400px] text-[20px]'>
+            <div className='flex justify-end mr-[20px]'>
+              <Link href="/Login">
+                <button className='px-[10px] py-[5px] rounded-lg hover:bg-gray-100 mr-[20px]'>
+                  Login
+                </button>
+              </Link>
+              <Link href="/SignUp">
+                <button className='px-[10px] py-[5px] rounded-lg hover:bg-gray-100'>
+                  Sign up
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
     </div>
