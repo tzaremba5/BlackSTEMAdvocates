@@ -4,7 +4,7 @@ import Typical from 'react-typical';
 function TypingAnimation() {
   return (
     <div className="flex justify-center pt-[20px] pb-[100px]">
-        <div className="flex-col font-mono flex text-[35px]">
+        <div className="flex-col font-mono flex text-[25px] md:text-[30px]">
             <h4> Fighting for </h4>
             <strong className="w-full bg-white">
                 <Typical

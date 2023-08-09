@@ -20,7 +20,7 @@ export default () => {
 
   return (
     <div className="flex flex-col items-center w-full p-8 border-gray-500 border-solid border rounded-sm mt-8">
-      <h2 className="text-3xl font-bold text-center">
+      <h2 className="text-lg font-bold text-center">
         I also have a newsletter!
       </h2>
       <p className="mt-2 font-light w-4/5 text-center leading-relaxed">

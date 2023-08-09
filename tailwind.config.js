@@ -5,6 +5,9 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './components_chat/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+        'tablet': '1200px',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

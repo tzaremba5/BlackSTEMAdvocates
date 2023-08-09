@@ -79,9 +79,9 @@ function SignUp() {
         <div>
           <HomePageHeader />
           <div className='flex justify-center'>
-            <div className='w-[500px] mt-[50px] mb-[150px]'>
+            <div className='w-full mx-[50px] max-w-[500px] mt-[50px] mb-[150px]'>
                 {/* Title */}
-                <div className='text-[30px] font-bold mb-[20px]'>
+                <div className='text-xl font-bold mb-[20px]'>
                     Create an Account
                 </div>
 
