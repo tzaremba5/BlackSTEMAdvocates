@@ -41,7 +41,7 @@ function Donate() {
         <div className="text-xl font-bold mb-4">
           Would you like to donate?
         </div>
-        <div className='flex justify-between'>
+        <div className='flex flex-col tablet:flex-row justify-between'>
           <button
               type="submit"
               className="border-2 rounded-md px-4 py-2 mt-2 hover:bg-indigo-500 hover:text-white"
