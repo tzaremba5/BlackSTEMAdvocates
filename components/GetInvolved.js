@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Footer from "./Footer";
 import Image from 'next/image'
+import Donate from '../components/Donate';
 
 export default () => {
   const [email, setEmail] = useState("");
@@ -21,26 +22,26 @@ export default () => {
   };
 
   return (
-    <div className="pt-[40px] pb-[30px]">
+    <div className="pt-[40px] pb-[30px] border-gray-500">
       <div className="border border-gray-500 border-dotted h-[2px] mb-[30px]"/>
-      <div className="flex flex-col tablet:flex-row justify-center">
-        <div className="flex justify-center">
+      <div className="flex flex-col tablet:flex-row tablet:justify-center ">
+        <div className="flex justify-center ">
           <div className="flex-col">
               <div className="text-xl font-bold">
                 Join the Newsletter
               </div>
               <div className="w-[400px]">
-                <div className="flex rounded-sm">
+                <div className="flex rounded-md">
                     <div className="w-full flex mt-5 flex-col lg:flex-row">
                         <input
-                          className=" bg-transparent appearance-none mb-2 lg:mb-0 border-2 border-gray-900 rounded py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:border-gray-600"
+                          className=" bg-transparent appearance-none mb-2 lg:mb-0 border-2 border-gray-900 rounded-md py-2 px-4 text-gray-900 leading-tight focus:outline-none focus:border-gray-600"
                           type="text"
                           placeholder="Enter Email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                         />
                         <button
-                          className={` flex hover:bg-green-200 justify-center border-2 border-gray-900 lg:ml-2 bg-brand2 focus:shadow-outline focus:outline-none text-center font-bold py-1 px-4 rounded ${
+                          className={` flex hover:bg-green-200 justify-center border-2 border-gray-900 lg:ml-2 bg-brand2 focus:shadow-outline focus:outline-none text-center font-bold py-1 px-4 rounded-md ${
                               state === "LOADING" ? "button-gradient-loading" : ""
                           }`}
                           type="button"
@@ -60,6 +61,7 @@ export default () => {
               </div>
             </div> 
           </div>
+
         <div className="flex justify-center content-center pt-[40px]">
           <div className="w-[400px]">
             <div className="flex justify-between mt-[30px] flex justify-around max-w-[500px]">
@@ -74,7 +76,7 @@ export default () => {
                 </a>
               </div>
               <div className="cursor-pointer hover:text-gray-700"> 
-                <a href='https://www.youtube.com/derickjones'  target='_blank'>
+                <a href='https://www.youtube.com/@dr.derickd.jonesjr.2015/featured'  target='_blank'>
                   <Image src="https://ucarecdn.com/11b66b00-a6ca-4549-b029-808e46ba8c39/facebook.png" width={40} height={40}/>
                 </a>
               </div>

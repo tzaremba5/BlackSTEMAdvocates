@@ -55,7 +55,6 @@ function SignUp() {
                 await setDoc(doc(db, "userChats", res.user.uid), {});
                 router.push('/dashboard');
               } catch (err) {
-                alert(err.message)
                 console.log(err);
                 // setErr(true);
                 setLoading(false);
@@ -65,7 +64,6 @@ function SignUp() {
         } catch (err) {
         //   setErr(true);
           setLoading(false);
-          alert(err.message)
         }
       };
     

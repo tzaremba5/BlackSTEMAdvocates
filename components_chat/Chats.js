@@ -39,7 +39,7 @@ function Chats() {
           key={chat[0]}
           onClick={() => handleSelect(chat[1].userInfo)}
         >
-          <div className="w-full border-b-2 border-gray-100 bg-gray-100 rounded-md mb-[10px] userChatInfo">
+          <div className="w-full border-b-2 border-gray-100 bg-gray-100 rounded-md mb-[10px] mr-[10px] userChatInfo">
             <div className='text-[20px] ml-[10px] mt-[10px] font-light'>{chat[1]?.userInfo?.displayName}</div>
             <div className='text-[20px] ml-[10px] mt-[10px] pb-[10px]'>{chat[1]?.lastMessage?.text}</div>
           </div>

@@ -23,6 +23,7 @@ function Sidebar() {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [err, setErr] = useState(false);
+  const [selected, setSelected] = useState(false);
 
   const { currentUser } = useContext(AuthContext);
 
@@ -50,6 +51,7 @@ function Sidebar() {
 
 
   const handleSelect = async () => {
+    setSelected(!selected);
 
     //check whether the group(chats in firestore) exists, if not create
     const combinedId =
@@ -105,8 +107,8 @@ function Sidebar() {
           ></input>
         </div>
 
-          {user && <div onClick={handleSelect}> 
-              <User first_name={user.displayName} last_name='Jones' color='red'/>  
+          {user && <div onClick={handleSelect} className={selected ? 'bg-gray-100' : ''}>  
+              <User displayName={user.displayName} color='red'/>  
             </div>}
       </div>
     </div>
