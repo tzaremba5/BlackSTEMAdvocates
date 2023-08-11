@@ -1,31 +1,85 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+import { checkout } from '../checkout';
 
 function Donate() {
-
   const [error, setError] = useState('');
+  const [donationAmount, setDonationAmount] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!donationAmount) {
+      setError('Please enter a donation amount.');
+      return;
+    }
+
+    const amountInCents = Math.round(parseFloat(donationAmount) * 100);
+
+    if (isNaN(amountInCents) || amountInCents <= 0) {
+      setError('Please enter a valid donation amount.');
+      return;
+    }
+
+    setError('');
+
+  };
+
+  const StripeCheckOut = (priceId) => {
+    checkout({
+      lineItems: [
+        {
+          price: priceId,
+          quantity: 1,
+        },
+      ],
+    })
   }
 
   return (
     <div className="flex justify-center mt-[50px] mx-[50px]">
       <div className='w-full max-w-[700px]'>
         <div className="text-xl font-bold mb-4">
-          Donate
+          Would you like to donate?
         </div>
-          <form onSubmit={handleSubmit}>
-              <label htmlFor="amount" className="block font-medium">
-                  What would you like to donate?
-              </label>
-              <input type="amount" placeholder="$ Donation Amount" className="border border-gray-300 rounded-md w-full p-2 mt-1 mb-4"/>
-
-              <button className="bg-black text-white rounded-md px-4 py-2 mt-2 w-full hover:bg-gray-800">
-                  Donate
-              </button>
-          </form>
+        <div className='flex justify-between'>
+          <button
+              type="submit"
+              className="border-2 rounded-md px-4 py-2 mt-2 hover:bg-indigo-500 hover:text-white"
+              onClick={() => {StripeCheckOut('price_1Ne3wkBa1RCfaJ9yF0nuKd5t')}}
+            >
+              Donate $5
+          </button>
+          <button
+              type="submit"
+              className="border-2 rounded-md px-4 py-2 mt-2 hover:bg-indigo-500 hover:text-white"
+              onClick={() => {StripeCheckOut('price_1Ne4cHBa1RCfaJ9yhVkrTSIN')}}
+            >
+              Donate $10
+          </button>
+          <button
+              type="submit"
+              className="border-2 rounded-md px-4 py-2 mt-2 hover:bg-indigo-500 hover:text-white"
+              onClick={() => {StripeCheckOut('price_1Ne4cmBa1RCfaJ9yzHL1DMxL')}}
+            >
+              Donate $20
+          </button>
+          <button
+              type="submit"
+              className="border-2 rounded-md px-4 py-2 mt-2 hover:bg-indigo-500 hover:text-white"
+              onClick={() => {StripeCheckOut('price_1Ne4d3Ba1RCfaJ9yEF7xn5ta')}}
+            >
+              Donate $50
+          </button>          <button
+              type="submit"
+              className="border-2 rounded-md px-4 py-2 mt-2 hover:bg-indigo-500 hover:text-white"
+              onClick={() => {StripeCheckOut('price_1Ne4dJBa1RCfaJ9y4FLIYd4G')}}
+            >
+              Donate $100
+          </button>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Donate
+export default Donate;
